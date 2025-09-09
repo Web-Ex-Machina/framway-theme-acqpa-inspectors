@@ -1,9 +1,9 @@
+@import "tailwindcss";
+
 @plugin "@tailwindcss/forms";
 @plugin "@tailwindcss/typography";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-/*@source "../../assets!**!*.js";*/
-/*@source "../../src/Form!**!*.php";*/
 @source "../../contao/templates/**/*.html.twig";
 @source "./safeword.txt";
