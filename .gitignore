@@ -1,0 +1,4 @@
+node_modules
+.idea
+tailwind-build.css
+package-lock.json
