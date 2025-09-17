@@ -1,42 +1,73 @@
 @import "tailwindcss";
-
+@import url(https://fonts.bunny.net/css?family=poppins:100,200,300,400,500,600,700,800,900);
 @plugin "@tailwindcss/forms";
 @plugin "@tailwindcss/typography";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
 @source "../../contao/templates/**/*.html.twig";
+@source "../../contao/templates/**/*.html5";
 @source "./safeword.txt";
 
+@theme{
+    --color-acqpa-50: oklch(0.974 0.011 252.087);
+    --color-acqpa-100: oklch(0.945 0.021 252.497);
+    --color-acqpa-200: oklch(0.885 0.046 245.288);
+    --color-acqpa-300: oklch(0.79 0.087 244.452);
+    --color-acqpa-400: oklch(0.686 0.13 245.281);
+    --color-acqpa-500: oklch(0.601 0.147 248.173);
+    --color-acqpa-600: oklch(0.536 0.149 251.832);
+    --color-acqpa-700: oklch(0.436 0.12 252.833);
+    --color-acqpa-800: oklch(0.392 0.1 251.451);
+    --color-acqpa-900: oklch(0.351 0.082 252.262);
+    --color-acqpa-950: oklch(0.269 0.061 253.199);
+    --color-acqpa: oklch(0.536 0.149 251.832);
 
-body{
-    @apply bg-white min-h-lvh;
+    --font-poppins: Poppins, sans-serif;
+
 }
-
+body{
+    @apply font-poppins bg-neutral-50 text-neutral-800;
+}
 form .formbody {
     label{
-        @apply text-gray-700;
+        @apply text-neutral-700;
     }
-    @apply text-gray-900;
+    @apply text-neutral-900;
     .select2FW-wrapper .select2-container .select2-selection,
     input, textarea, select, .captcha{
-        @apply mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0;
-        @apply disabled:bg-gray-100/50 disabled:text-gray-900/70 disabled:border-gray-100/50 hover:disabled:bg-gray-100/70 hover:disabled:border-gray-100/70 disabled:cursor-not-allowed;
+        @apply mt-1 block w-full rounded-md bg-neutral-100 border-transparent focus:border-neutral-500 focus:bg-white focus:ring-0;
+        @apply disabled:bg-neutral-100/50 disabled:text-neutral-900/70 disabled:border-neutral-100/50 hover:disabled:bg-neutral-100/70 hover:disabled:border-neutral-100/70 disabled:cursor-not-allowed;
     }
 
 
     input.checkbox:checked + label::before{
-        @apply bg-gray-600;
+        @apply bg-neutral-600;
         background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");
     }
 
     input.checkbox + label{
-        @apply before:rounded before:bg-gray-200 before:border-transparent before:size-4 before:absolute before:-right-0.5;
-        @apply before:focus:border-transparent before:focus:bg-gray-200 before:text-gray-700;
+        @apply before:rounded before:bg-neutral-200 before:border-transparent before:size-4 before:absolute before:-right-0.5;
+        @apply before:focus:border-transparent before:focus:bg-neutral-200 before:text-neutral-700;
 
         @apply after:!sr-only after:content-none;
     }
+    .btn, .btn-lg, .btn-load, .btn-sm, [class*="btn-bd-"], [class*="btn-bg-"], button:where([type="submit"], [type="button"]), input:where([type="submit"], [type="button"]){
+        @apply uppercase rounded-md bg-acqpa-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs transition-all;
+    }
 
+}
+
+h1, h2, h3, h4, h5, h6{
+    @apply font-medium uppercase text-acqpa;
+}
+
+.bg-white .formbody{
+    .select2FW-wrapper .select2-container .select2-selection,
+    input[type],
+    .textarea{
+        @apply border-neutral-100;
+    }
 }
 
 
@@ -45,4 +76,16 @@ form .formbody {
 }
 .mod_personalData .formbody{
  @apply grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-4;
+}
+
+/* Style pour le formulaire de login */
+
+.mod_registration .formbody{
+    @apply grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-4;
+    .widget-submit{
+        @apply col-start-1 col-end-2 md:col-end-3;
+        button{
+            @apply w-full mt-4;
+        }
+    }
 }
