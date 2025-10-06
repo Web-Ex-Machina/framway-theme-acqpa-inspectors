@@ -1,5 +1,5 @@
 @import "tailwindcss" prefix(tw);
-@import url(https://fonts.bunny.net/css?family=poppins:100,200,300,400,500,600,700,800,900);
+@import url(https://fonts.bunny.net/css?family=ubuntu-condensed:400|ubuntu-sans:100,200,300,400,500,600,700,800,900);
 @plugin "@tailwindcss/forms";
 @plugin "@tailwindcss/typography";
 
@@ -23,18 +23,23 @@
     --color-acqpa-950: oklch(0.269 0.061 253.199);
     --color-acqpa: oklch(0.536 0.149 251.832);
 
-    --font-poppins: Poppins, sans-serif;
+    --font-body: "Ubuntu Sans", sans-serif;
+    --font-alternative: "Ubuntu Condensed", sans-serif;
 
 }
 body{
-    @apply tw:font-poppins tw:bg-neutral-50 tw:text-neutral-800;
+    @apply tw:font-body tw:bg-neutral-50 tw:text-neutral-800;
 }
 
 #wrapper{
     @apply tw:bg-neutral-50;
 }
 
-#container > *{
+#container > main{
+    @apply tw:bg-white tw:p-6 tw:rounded-md;
+}
+
+#container-simple > main > div{
     @apply tw:bg-white tw:p-6 tw:rounded-md;
 }
 
@@ -78,7 +83,7 @@ form .formbody {
 }
 
 h1, h2, h3, h4, h5, h6{
-    @apply tw:font-medium tw:uppercase tw:text-acqpa;
+    @apply tw:font-medium tw:uppercase tw:text-acqpa tw:font-alternative;
 }
 
 .bg-white .formbody{
@@ -135,4 +140,100 @@ h1, h2, h3, h4, h5, h6{
         @apply tw:block tw:px-4 tw:py-2 tw:text-sm tw:text-neutral-700 tw:focus:outline-hidden;
     }
 }
+
+.tw-pill{
+    @apply tw:inline-flex tw:items-center tw:gap-x-1.5 tw:rounded-full tw:px-2 tw:py-1 tw:text-xs tw:font-medium tw:text-neutral-900 tw:inset-ring tw:inset-ring-neutral-200;
+    svg{
+        @apply tw:size-1.5;
+    }
+    &.tw-pill-refused svg{
+        @apply tw:fill-red-500;
+    }
+    &.tw-pill-accepted svg{
+        @apply tw:fill-green-500;
+    }
+    &.tw-pill-pending svg{
+        @apply tw:fill-orange-500;
+    }
+    &.tw-pill-wait-valid svg{
+        @apply tw:fill-indigo-500;
+    }
+}
+.mod_article.block{
+    @apply tw:overflow-visible;
+}
+
+ol.vertical-menu{
+    @apply tw:space-y-4 tw:m-0 tw:p-0;
+    counter-reset: section;
+    .element-wrapper{
+        .icon{
+            @apply tw:before:size-4 tw:before:text-gray-500 tw:before:inline-block;
+            @apply tw:before:antialiased tw:before:content-['\e105'];
+            font: var(--fa-font-duotone-light);
+        }
+        @apply tw:bg-white tw:items-center tw:grid tw:gap-2 tw:grid-cols-[auto_1fr_auto] tw:text-gray-300 tw:w-full tw:p-3 tw:text-gray-700 tw:border tw:border-gray-300 tw:rounded-lg tw:bg-gray-50;
+        @apply tw:before:content-[counter(section)] tw:before:uppercase tw:before:font-medium tw:before:font-alternative;
+
+        h3{
+            @apply tw:font-medium tw:text-gray-700 tw:text-lg tw:uppercase tw:m-0;
+        }
+        &.current{
+            @apply tw:text-acqpa-700 tw:border-acqpa-300;
+            .vertical-menu-element i{@apply tw:size-4 tw:text-acqpa-500;}
+            h3{@apply tw:text-acqpa-700;}
+            .icon{@apply tw:before:text-acqpa-700 tw:before:content-['\e20e'];}
+        }
+        &.success{
+            @apply tw:text-green-700 tw:border-green-300;
+            .vertical-menu-element i{@apply tw:size-4 tw:text-green-500;}
+            h3{@apply tw:text-green-700;}
+            .icon{@apply tw:before:text-green-700 tw:before:content-['\f058'];}
+        }
+        &.warning{
+            @apply tw:text-orange-700 tw:border-orange-300;
+            .vertical-menu-element i{@apply tw:size-4 tw:text-orange-500;}
+            h3{@apply tw:text-orange-700;}
+            .icon{@apply tw:before:text-orange-700 tw:before:content-['\f06a'];}
+        }
+        &.error{
+            @apply tw:text-red-700 tw:border-red-300;
+            .vertical-menu-element i{@apply tw:size-4 tw:text-red-500;}
+            h3{@apply tw:text-red-700;}
+            .icon{@apply tw:before:text-red-700 tw:before:content-['\f2ee'];}
+        }
+        &.retry{
+            @apply tw:text-acqpa-700 tw:border-acqpa-300;
+            .vertical-menu-element i{@apply tw:size-4 tw:text-acqpa-500;}
+            h3{@apply tw:text-acqpa-700;}
+            .icon{@apply tw:before:text-acqpa-700 tw:before:content-['\f021'];}
+        }
+
+        &.validation-ongoing{
+            @apply tw:text-violet-700 tw:border-violet-300;
+            .vertical-menu-element i{@apply tw:size-4 tw:text-violet-500;}
+            h3{@apply tw:text-violet-700;}
+            .icon{@apply tw:before:text-violet-700 tw:before:content-['\f0a9'];}
+        }
+        &.validation-success{
+            @apply tw:text-lime-700 tw:border-lime-300;
+            .vertical-menu-element i{@apply tw:size-4 tw:text-lime-500;}
+            h3{@apply tw:text-lime-700;}
+            .icon{@apply tw:before:text-lime-700 tw:before:content-['\e1d9'];}
+        }
+        &.validation-not-started{
+            @apply tw:text-slate-700 tw:border-slate-300;
+            .vertical-menu-element i{@apply tw:size-4 tw:text-slate-500;}
+            h3{@apply tw:text-slate-700;}
+            .icon{@apply tw:before:text-slate-700 tw:before:content-['\e105'];}
+        }
+
+    }
+    .element-wrapper::before {
+        counter-increment: section 1;
+    }
+
+
+}
+
 
