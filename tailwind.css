@@ -7,6 +7,8 @@
 
 @source "../../contao/templates/**/*.html.twig";
 @source "../../contao/templates/**/*.html5";
+@source "./../../../../../vendor/webexmachina/acqpa-inspectors-certification-platform-bundle/contao/templates/**/*.html.twig";
+@source "./../../../../../vendor/webexmachina/acqpa-inspectors-certification-platform-bundle/contao/templates/**/*.html5";
 @source "./safeword.txt";
 
 @theme{
