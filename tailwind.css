@@ -73,17 +73,21 @@ body{
     }
 }
 
-form .formbody {
+main {
     label{
         @apply tw:text-acqpa-gris-700;
     }
     @apply tw:text-acqpa-gris-800;
     .select2FW-wrapper .select2-container .select2-selection,
+    input[type="date"], input[type="email"], input[type="number"], input[type="password"],
+    input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"],
     input, textarea, select, .captcha{
-        @apply tw:mt-1 tw:block tw:w-full tw:rounded-md tw:border-acqpa-gris-300 tw:focus:border-acqpa-gris-500 tw:focus:bg-white tw:focus:ring-0;
+        @apply tw:mt-1 tw:m-0 tw:block tw:w-full tw:rounded-md tw:border-acqpa-gris-300 tw:focus:border-acqpa-gris-500 tw:focus:bg-white tw:focus:ring-0;
         @apply tw:disabled:bg-acqpa-gris-100/50 tw:disabled:text-acqpa-gris-800/70 tw:disabled:border-acqpa-gris-100/50 tw:hover:disabled:bg-acqpa-gris-100/70 tw:hover:disabled:border-acqpa-gris-100/70 tw:disabled:cursor-not-allowed;
     }
-
+    .select2FW-wrapper .select2-container{
+        @apply tw:m-0;
+    }
 
     input.checkbox:checked + label::before{
         @apply tw:bg-acqpa-gris-600;
@@ -96,9 +100,22 @@ form .formbody {
 
         @apply tw:after:!sr-only tw:after:content-none;
     }
-    .btn, .btn-lg, .btn-load, .btn-sm, [class*="btn-bd-"], [class*="btn-bg-"], button:where([type="submit"], [type="button"]), input:where([type="submit"], [type="button"]){
+    .btn, .btn-lg, .btn-load, .btn-sm, .btn-submit, [class*="btn-bd-"], [class*="btn-bg-"], button:where([type="submit"], [type="button"]), input:where([type="submit"], [type="button"]){
         @apply tw:uppercase tw:rounded-md tw:bg-acqpa-blue-600 tw:px-3.5 tw:py-2.5 tw:text-sm tw:font-semibold tw:text-white tw:shadow-xs tw:transition-all;
     }
+    .btn-red, .btn-error{
+        @apply  tw:bg-red-500 tw:hover:bg-red-600;
+    }
+    .btn-green, .btn-success {
+        @apply  tw:bg-lime-500 tw:hover:bg-lime-600;
+    }
+    .btn-orange, .btn-warning{
+        @apply  tw:bg-orange-500 tw:hover:bg-orange-600;
+    }
+    .btn-reverse, .btn-secondary{
+        @apply  tw:bg-white tw:text-acqpa-blue-600 tw:hover:bg-acqpa-blue-600 tw:hover:text-white;
+    }
+
     .widget-checkbox legend{
         @apply tw:float-none;
     }
@@ -121,9 +138,9 @@ h1, h2, h3, h4, h5, h6{
     @apply tw:content-start;
 }
 .mod_personalData {
-    @apply tw:grid tw:gap-8 tw:grid-cols-1 tw:md:grid-cols-[1fr_1.5fr];
+    /*@apply tw:grid tw:gap-8 tw:grid-cols-1 tw:md:grid-cols-[1fr_1.5fr];*/
     .formbody{
-        @apply tw:grid tw:gap-2 tw:md:grid-cols-[50%_50%] tw:md:gap-3;
+        @apply tw:grid tw:gap-2 tw:md:grid-cols-[1fr_1fr] tw:md:gap-3;
     }
 }
 
