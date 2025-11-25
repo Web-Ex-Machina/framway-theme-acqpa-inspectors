@@ -81,7 +81,7 @@ main {
     .select2FW-wrapper .select2-container .select2-selection,
     input[type="date"], input[type="email"], input[type="number"], input[type="password"],
     input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"],
-    input, textarea, select, .captcha{
+    textarea, select, .captcha{
         @apply tw:mt-1 tw:m-0 tw:block tw:w-full tw:rounded-md tw:border-acqpa-gris-300 tw:focus:border-acqpa-gris-500 tw:focus:bg-white tw:focus:ring-0;
         @apply tw:disabled:bg-acqpa-gris-100/50 tw:disabled:text-acqpa-gris-800/70 tw:disabled:border-acqpa-gris-100/50 tw:hover:disabled:bg-acqpa-gris-100/70 tw:hover:disabled:border-acqpa-gris-100/70 tw:disabled:cursor-not-allowed;
     }
@@ -236,7 +236,7 @@ ol.vertical-menu{
         @apply tw:before:content-[counter(section)] tw:before:uppercase tw:before:font-medium;
 
         h3{
-            @apply tw:font-medium tw:text-gray-700 tw:text-lg tw:uppercase tw:m-0;
+            @apply tw:font-medium tw:text-gray-700 tw:text-base tw:uppercase tw:m-0;
         }
         &.current{
             @apply tw:text-acqpa-blue-700 tw:border-acqpa-blue-300;
@@ -244,48 +244,41 @@ ol.vertical-menu{
             h3{@apply tw:text-acqpa-blue-700;}
             .icon{@apply tw:before:text-acqpa-blue-700 tw:before:content-['\e20e'];}
         }
-        &.success{
-            @apply tw:text-green-700 tw:border-green-300;
+        &.step-fill-complete {
             .vertical-menu-element i{@apply tw:size-4 tw:text-green-500;}
-            h3{@apply tw:text-green-700;}
             .icon{@apply tw:before:text-green-700 tw:before:content-['\f058'];}
         }
-        &.warning{
-            @apply tw:text-orange-700 tw:border-orange-300;
+        &.step-fill-mixed {
             .vertical-menu-element i{@apply tw:size-4 tw:text-orange-500;}
-            h3{@apply tw:text-orange-700;}
             .icon{@apply tw:before:text-orange-700 tw:before:content-['\f06a'];}
         }
-        &.error{
-            @apply tw:text-red-700 tw:border-red-300;
-            .vertical-menu-element i{@apply tw:size-4 tw:text-red-500;}
-            h3{@apply tw:text-red-700;}
-            .icon{@apply tw:before:text-red-700 tw:before:content-['\f2ee'];}
+        &.step-fill-void {
+            .vertical-menu-element i{@apply tw:size-4 tw:text-slate-500;}
+            .icon{@apply tw:before:text-slate-700 tw:before:content-['\e105'];}
         }
-        &.retry{
-            @apply tw:text-acqpa-blue-700 tw:border-acqpa-blue-300;
-            .vertical-menu-element i{@apply tw:size-4 tw:text-acqpa-blue-500;}
-            h3{@apply tw:text-acqpa-blue-700;}
-            .icon{@apply tw:before:text-acqpa-blue-700 tw:before:content-['\f021'];}
-        }
-
-        &.validation-ongoing{
+        &.step-validation-ongoing{
             @apply tw:text-violet-700 tw:border-violet-300;
             .vertical-menu-element i{@apply tw:size-4 tw:text-violet-500;}
             h3{@apply tw:text-violet-700;}
             .icon{@apply tw:before:text-violet-700 tw:before:content-['\f0a9'];}
         }
-        &.validation-success{
+        &.step-validation-success{
             @apply tw:text-lime-700 tw:border-lime-300;
             .vertical-menu-element i{@apply tw:size-4 tw:text-lime-500;}
             h3{@apply tw:text-lime-700;}
             .icon{@apply tw:before:text-lime-700 tw:before:content-['\e1d9'];}
         }
-        &.validation-not-started{
+        &.step-validation-not-started{
             @apply tw:text-slate-700 tw:border-slate-300;
             .vertical-menu-element i{@apply tw:size-4 tw:text-slate-500;}
             h3{@apply tw:text-slate-700;}
             .icon{@apply tw:before:text-slate-700 tw:before:content-['\e105'];}
+        }
+        &.step-validation-error{
+            @apply tw:text-red-700 tw:border-red-300;
+            .vertical-menu-element i{@apply tw:size-4 tw:text-red-500;}
+            h3{@apply tw:text-red-700;}
+            .icon{@apply tw:before:text-red-700 tw:before:content-['\f2ee'];}
         }
 
     }
@@ -312,4 +305,14 @@ ol.vertical-menu{
             }
         }
     }
+}
+
+input[type="file"]{
+    @apply tw:w-full tw:overflow-clip tw:rounded-md tw:border tw:border-acqpa-gris-300 tw:text-sm tw:file:mr-4;
+    @apply tw:file:border-none tw:file:bg-acqpa-gris-50 tw:file:px-4 tw:file:py-2 tw:file:font-medium;
+    @apply tw:focus-visible:outline-2 tw:focus-visible:outline-offset-2 tw:focus-visible:outline-acqpa-blue tw:disabled:cursor-not-allowed tw:disabled:opacity-75;
+}
+
+.modalFW__wrapper{
+    @apply tw:rounded-md;
 }
