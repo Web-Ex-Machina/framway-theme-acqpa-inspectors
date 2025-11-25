@@ -101,7 +101,8 @@ main {
         @apply tw:after:!sr-only tw:after:content-none;
     }
     .btn, .btn-lg, .btn-load, .btn-sm, .btn-submit, [class*="btn-bd-"], [class*="btn-bg-"], button:where([type="submit"], [type="button"]), input:where([type="submit"], [type="button"]){
-        @apply tw:uppercase tw:rounded-md tw:bg-acqpa-blue-600 tw:px-3.5 tw:py-2.5 tw:text-sm tw:font-semibold tw:text-white tw:shadow-xs tw:transition-all;
+        @apply tw:uppercase tw:rounded-md tw:bg-acqpa-blue-600 tw:px-4 tw:py-1.5 tw:text-sm tw:font-semibold tw:text-white tw:transition-all;
+        @apply tw:disabled:opacity-20 tw:disabled:cursor-not-allowed;
     }
     .btn-red, .btn-error{
         @apply  tw:bg-red-500 tw:hover:bg-red-600;
@@ -113,7 +114,7 @@ main {
         @apply  tw:bg-orange-500 tw:hover:bg-orange-600;
     }
     .btn-reverse, .btn-secondary{
-        @apply  tw:bg-white tw:text-acqpa-blue-600 tw:hover:bg-acqpa-blue-600 tw:hover:text-white;
+        @apply  tw:bg-acqpa-blue-100 tw:border-acqpa-blue-100 tw:text-acqpa-blue-600;
     }
 
     .widget-checkbox legend{
@@ -232,7 +233,7 @@ ol.vertical-menu{
             @apply tw:before:antialiased tw:before:content-['\e105'];
             font: var(--fa-font-duotone-light);
         }
-        @apply tw:bg-white tw:items-center tw:grid tw:gap-2 tw:grid-cols-[auto_1fr_auto] tw:text-gray-300 tw:w-full tw:p-3 tw:text-gray-700 tw:border tw:border-gray-300 tw:rounded-lg tw:bg-gray-50;
+        @apply tw:items-center tw:grid tw:gap-2 tw:grid-cols-[auto_1fr_auto] tw:w-full tw:p-3 tw:text-gray-700 tw:border tw:border-gray-300 tw:rounded-lg tw:bg-gray-50;
         @apply tw:before:content-[counter(section)] tw:before:uppercase tw:before:font-medium;
 
         h3{
@@ -314,5 +315,27 @@ input[type="file"]{
 }
 
 .modalFW__wrapper{
+    @apply tw:rounded-md tw:overflow-hidden;
+    .modalFW__content{
+        @apply tw:p-4;
+    }
+    .modalFW__header{
+        @apply tw:bg-acqpa-gris-50;
+        .modalFW__title{
+            @apply tw:border-0
+        }
+    }
+}
+.bd-error.ft-error{
+    @apply tw:border-0 tw:border-l-4 tw:bg-red-500/10 tw:px-4 tw:py-2;
+}
+.bd-blue.ft-blue{
+    @apply tw:border-0 tw:border-l-4 tw:bg-blue-500/10 tw:px-4 tw:py-2;
+}
+#identity_piece,#identity_picture{
+    @apply tw:mb-2;
+}
+
+.closeAttachmentModal{
     @apply tw:rounded-md;
 }
