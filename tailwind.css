@@ -229,15 +229,15 @@ ol.vertical-menu{
     counter-reset: section;
     .element-wrapper{
         .icon{
-            @apply tw:before:size-4 tw:before:text-gray-500 tw:before:inline-block;
+            @apply tw:before:size-4 tw:before:text-acqpa-gris-500 tw:before:inline-block;
             @apply tw:before:antialiased tw:before:content-['\e105'];
             font: var(--fa-font-duotone-light);
         }
-        @apply tw:items-center tw:grid tw:gap-2 tw:grid-cols-[auto_1fr_auto] tw:w-full tw:p-3 tw:text-gray-700 tw:border tw:border-gray-300 tw:rounded-lg tw:bg-gray-50;
+        @apply tw:items-center tw:grid tw:gap-2 tw:grid-cols-[auto_1fr_auto] tw:w-full tw:p-3 tw:text-acqpa-gris-700 tw:border tw:border-acqpa-gris-300 tw:rounded-lg tw:bg-acqpa-gris-50;
         @apply tw:before:content-[counter(section)] tw:before:uppercase tw:before:font-medium;
 
         h3{
-            @apply tw:font-medium tw:text-gray-700 tw:text-base tw:uppercase tw:m-0;
+            @apply tw:font-medium tw:text-acqpa-gris-700 tw:text-base tw:uppercase tw:m-0;
         }
         &.current{
             @apply tw:text-acqpa-blue-700 tw:border-acqpa-blue-300;
@@ -338,4 +338,7 @@ input[type="file"]{
 
 .closeAttachmentModal{
     @apply tw:rounded-md;
+}
+.nc_span{
+    @apply tw:inline-flex tw:items-center tw:rounded-full tw:bg-red-400/10 tw:px-1.5 tw:py-0.5 tw:text-xs tw:font-medium tw:text-red-400;
 }
