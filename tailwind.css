@@ -138,24 +138,23 @@ h1, h2, h3, h4, h5, h6{
 .formbody .widget{
     @apply tw:content-start;
 }
-.mod_personalData {
-    /*@apply tw:grid tw:gap-8 tw:grid-cols-1 tw:md:grid-cols-[1fr_1.5fr];*/
-    .formbody{
-        @apply tw:grid tw:gap-2 tw:md:grid-cols-[1fr_1fr] tw:md:gap-3;
-    }
-}
+
+/*.mod_personalData .formbody{*/
+/*        @apply tw:grid tw:gap-2 tw:md:grid-cols-[1fr_1fr] tw:md:gap-3;*/
+/*}*/
 
 /* Style pour le formulaire de login */
 
-.mod_registration .formbody{
-    @apply tw:grid tw:grid-cols-1 tw:gap-2 tw:md:grid-cols-2 tw:md:gap-4;
-    .widget-submit{
-        @apply tw:col-start-1 tw:col-end-2 tw:md:col-end-3;
-        button{
-            @apply tw:w-full tw:mt-4;
-        }
-    }
-}
+/*.mod_registration .formbody{*/
+/*    @apply tw:grid tw:grid-cols-1 tw:gap-2 tw:md:grid-cols-2 tw:md:gap-4;*/
+/*    .widget-submit{*/
+/*        @apply tw:col-start-1 tw:col-end-2 tw:md:col-end-3;*/
+/*        button{*/
+/*            @apply tw:w-full tw:mt-4;*/
+/*        }*/
+/*    }*/
+/*}*/
+
 #main-menu .level_1{
     @apply tw:flex tw:space-x-4 tw:p-0 tw:m-0;
     li a{
@@ -341,4 +340,13 @@ input[type="file"]{
 }
 .nc_span{
     @apply tw:inline-flex tw:items-center tw:rounded-full tw:bg-red-400/10 tw:px-1.5 tw:py-0.5 tw:text-xs tw:font-medium tw:text-red-400;
+}
+.green_span{
+    @apply tw:inline-flex tw:items-center tw:rounded-full tw:bg-green-400/10 tw:px-1.5 tw:py-0.5 tw:text-xs tw:font-medium tw:text-green-400;
+}
+.orange_span{
+    @apply tw:inline-flex tw:items-center tw:rounded-full tw:bg-orange-400/10 tw:px-1.5 tw:py-0.5 tw:text-xs tw:font-medium tw:text-orange-400;
+}
+.blue_span{
+    @apply tw:inline-flex tw:items-center tw:rounded-full tw:bg-blue-400/10 tw:px-1.5 tw:py-0.5 tw:text-xs tw:font-medium tw:text-blue-400;
 }
