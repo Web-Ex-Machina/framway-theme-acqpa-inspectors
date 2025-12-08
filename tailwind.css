@@ -105,16 +105,16 @@ main {
         @apply tw:disabled:opacity-20 tw:disabled:cursor-not-allowed;
     }
     .btn-red, .btn-error{
-        @apply  tw:bg-red-500 tw:hover:bg-red-600;
+        @apply  tw:bg-red-500 tw:hover:bg-red-600 tw:border-red-600;
     }
     .btn-green, .btn-success {
-        @apply  tw:bg-lime-500 tw:hover:bg-lime-600;
+        @apply  tw:bg-lime-500 tw:hover:bg-lime-600 tw:border-lime-600;
     }
     .btn-orange, .btn-warning{
-        @apply  tw:bg-orange-500 tw:hover:bg-orange-600;
+        @apply  tw:bg-orange-500 tw:hover:bg-orange-600 tw:border-orange-600;
     }
     .btn-reverse, .btn-secondary{
-        @apply  tw:bg-acqpa-blue-100 tw:border-acqpa-blue-100 tw:text-acqpa-blue-600;
+        @apply  tw:bg-acqpa-blue-100 tw:hover:bg-acqpa-blue-100 tw:text-acqpa-blue-600 tw:border-acqpa-blue-100 ;
     }
 
     .widget-checkbox legend{
