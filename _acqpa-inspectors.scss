@@ -7,3 +7,22 @@ canvas.signature,img.signature{
 .iti__override{
 	display:block !important;
 }
+
+.tl_message { 
+	.tl_error{
+		@extend .bd-red;
+		@extend .ft-red;
+	}
+	.tl_warning{
+		@extend .bd-orange;
+		@extend .ft-orange;
+	}
+	.tl_info{
+		@extend .bd-blue;
+		@extend .ft-blue;
+	}
+	.tl_success{
+		@extend .bd-green;
+		@extend .ft-green;
+	}
+}
