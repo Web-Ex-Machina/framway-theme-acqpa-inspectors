@@ -58,14 +58,9 @@ body{
     @apply tw:bg-white tw:font-body tw:text-acqpa-gris-800;
 }
 
-#container > main{
-    @apply tw:p-6 tw:rounded-md;
-}
-
 #container-simple > main > div{
     @apply tw:p-6 tw:rounded-md;
 }
-
 
 #mainNav{
     #menu-button-1{
@@ -104,7 +99,7 @@ main {
 
     .comment_acqpa_block{
         input.checkbox + label{
-            @apply tw:before:bg-acqpa-orange-300;
+            @apply tw:before:bg-orange-300;
         }
         input.checkbox:checked + label::before{
             @apply tw:bg-acqpa-blue-500;
@@ -255,11 +250,11 @@ ol.vertical-menu{
             @apply tw:before:antialiased tw:before:content-['\e105'];
             font: var(--fa-font-duotone-light);
         }
-        @apply tw:items-center tw:grid tw:gap-2 tw:grid-cols-[auto_1fr_auto] tw:w-full tw:p-3 tw:text-acqpa-gris-700 tw:border tw:border-acqpa-gris-300 tw:rounded-lg tw:bg-acqpa-gris-50;
+        @apply tw:items-center tw:grid tw:gap-2 tw:grid-cols-[auto_1fr_auto] tw:w-full tw:px-3 tw:py-1.5 tw:text-acqpa-gris-700 tw:border tw:border-acqpa-gris-300 tw:rounded-lg tw:bg-acqpa-gris-50;
         @apply tw:before:content-[counter(section)] tw:before:uppercase tw:before:font-medium;
 
         h3{
-            @apply tw:font-medium tw:text-acqpa-gris-700 tw:text-base tw:uppercase tw:m-0;
+            @apply tw:font-medium tw:text-acqpa-gris-700 tw:text-sm tw:m-0;
         }
         &.current{
             @apply tw:text-acqpa-blue-700 tw:border-acqpa-blue-300;
