@@ -40,5 +40,16 @@ canvas.signature,img.signature{
 	.dialog__header{
 		border-bottom: 1px solid grey;
 		padding: 0.3em;
+		position: sticky;
+		top:0;
+		background-color: white;
+	}
+
+	.dialog__content{
+		padding: 0.3em;
+	}
+
+	.dialog__footer{
+		padding: 0.3em;
 	}
 }
