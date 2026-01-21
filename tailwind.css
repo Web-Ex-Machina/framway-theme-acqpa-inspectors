@@ -9,6 +9,7 @@
 @source "../../contao/templates/**/*.html5";
 @source "./../../../../../vendor/webexmachina/acqpa-inspectors-certification-platform-bundle/contao/templates/**/*.html.twig";
 @source "./../../../../../vendor/webexmachina/acqpa-inspectors-certification-platform-bundle/contao/templates/**/*.html5";
+@source "./../../../../../vendor/webexmachina/acqpa-inspectors-certification-platform-bundle/src/Controller/Frontend/**/*.php";
 @source "./safeword.txt";
 
 @theme{
@@ -367,4 +368,20 @@ input[type="file"]{
 }
 .blue_span{
     @apply tw:inline-flex tw:items-center tw:rounded-full tw:bg-blue-400/10 tw:px-1.5 tw:py-0.5 tw:text-xs tw:font-medium tw:text-blue-400;
+}
+
+.modal-exams{
+    @apply tw:opacity-90 tw:transition-all tw:bg-acqpa-gris-50;
+    .modal-arrow{
+        @apply tw:opacity-0 tw:transition-all;
+    }
+    .modal-close{
+        @apply tw:rounded-md tw:text-red-400! tw:hover:text-red-500!;
+    }
+}
+.modal-exams:hover{
+    @apply tw:shadow-md tw:opacity-100 tw:bg-acqpa-gris-100 tw:no-underline;
+    .modal-arrow{
+        @apply tw:opacity-100;
+    }
 }
