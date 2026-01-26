@@ -376,7 +376,10 @@ input[type="file"]{
         @apply tw:opacity-0 tw:transition-all;
     }
     .modal-close{
-        @apply tw:rounded-md tw:text-red-400! tw:hover:text-red-500!;
+        @apply tw:rounded-md tw:text-red-400!;
+    }
+    .modal-close:hover{
+        @apply tw:text-red-500!;
     }
 }
 .modal-exams:hover{
