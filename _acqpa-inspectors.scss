@@ -25,6 +25,10 @@ canvas.signature,img.signature{
 		@extend .bd-green;
 		@extend .ft-green;
 	}
+	.tl_confirm{
+		@extend .bd-green;
+		@extend .ft-green;
+	}
 }
 .dialog__confirm {
 	position: fixed;
@@ -52,4 +56,9 @@ canvas.signature,img.signature{
 	.dialog__footer{
 		padding: 0.3em;
 	}
+}
+
+img.avatar{
+	width:32px;
+	height:32px;
 }
