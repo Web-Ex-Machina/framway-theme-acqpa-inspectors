@@ -62,3 +62,8 @@ img.avatar{
 	width:32px;
 	height:32px;
 }
+
+td > div.input-number__container:has(> input.number_custom){
+	margin-bottom: 0;
+	width:75px;
+}
