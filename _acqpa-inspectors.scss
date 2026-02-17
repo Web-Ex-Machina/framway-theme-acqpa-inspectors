@@ -71,3 +71,13 @@ td > div.input-number__container:has(> input.number_custom){
 	margin-bottom: 0;
 	width:75px;
 }
+
+.label_aligned_with_input{
+	padding-top: 0.25em;
+	padding-right: 0.5em;
+	padding-bottom: 0.25em;
+}
+
+table.odd-even tbody tr:nth-child(even){
+	/*background-color: #fafafa;*/
+}
