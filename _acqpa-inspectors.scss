@@ -81,3 +81,19 @@ td > div.input-number__container:has(> input.number_custom){
 table.odd-even tbody tr:nth-child(even){
 	/*background-color: #fafafa;*/
 }
+
+/* override  .table-list__action--toggler functionning to make it work on not .table-list__container */
+table:not(.table-list__container) td.toggled .table-list__action--wrapper .table-list__action--toggler .toggler--close, 
+table:not(.table-list__container) th.toggled .table-list__action--wrapper .table-list__action--toggler .toggler--close {
+  display: inline;
+}
+
+table:not(.table-list__container) td.toggled .table-list__action--wrapper .table-list__action--toggler .toggler--open, 
+table:not(.table-list__container) th.toggled .table-list__action--wrapper .table-list__action--toggler .toggler--open {
+  display: none;
+}
+
+table:not(.table-list__container) td.toggled .table-list__action--wrapper .table-list__action, 
+table:not(.table-list__container) th.toggled .table-list__action--wrapper .table-list__action {
+  display: inline-block;
+}
