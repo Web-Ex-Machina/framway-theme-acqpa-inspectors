@@ -10,6 +10,7 @@ canvas.signature,img.signature{
 
 .iti__override{
 	display:block !important;
+	margin-top:4px; /* so field is aligned with others in grids */
 }
 
 .tl_message { 
@@ -80,6 +81,13 @@ td > div.input-number__container:has(> input.number_custom){
 
 table.odd-even tbody tr:nth-child(even){
 	/*background-color: #fafafa;*/
+}
+
+/* override table-list__line having shadows */
+.table-list__container tbody tr:not(.table-list__headline),
+.table-list__line {
+	/*-webkit-box-shadow: none;*/
+	/*box-shadow: none;*/
 }
 
 /* override  .table-list__action--toggler functionning to make it work on not .table-list__container */
