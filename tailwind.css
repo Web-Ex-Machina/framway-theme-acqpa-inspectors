@@ -344,12 +344,28 @@ input[type="file"]{
         }
     }
 }
-.bd-error.ft-error{
-    @apply tw:border-0 tw:border-l-4 tw:bg-red-500/10 tw:px-4 tw:py-2;
+
+.bd-error.ft-error,
+.tl_message .tl_error{
+    @apply tw:border-0 tw:border-l-4 tw:bg-red-500/10 tw:px-4 tw:py-2;    
 }
-.bd-blue.ft-blue{
+
+.bd-blue.ft-blue,
+.bd-info.ft-info,
+.tl_message .tl_info{
     @apply tw:border-0 tw:border-l-4 tw:bg-blue-500/10 tw:px-4 tw:py-2;
 }
+
+.bd-success.ft-success,
+.tl_message .tl_confirm{
+    @apply tw:border-0 tw:border-l-4 tw:bg-green-500/10 tw:px-4 tw:py-2;
+}
+
+.bd-warning.ft-warning,
+.tl_message .tl_warning{
+    @apply tw:border-0 tw:border-l-4 tw:bg-orange-500/10 tw:text-orange-400 tw:px-4 tw:py-2;
+}
+
 #identity_piece,#identity_picture{
     @apply tw:mb-2;
 }
