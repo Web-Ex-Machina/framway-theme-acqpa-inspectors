@@ -116,7 +116,8 @@ main {
 
 
     .btn, .btn-lg, .btn-load, .btn-sm, .btn-submit, [class*="btn-bd-"], [class*="btn-bg-"], button:where([type="submit"], [type="button"]), input:where([type="submit"], [type="button"]){
-        @apply tw:uppercase tw:rounded-md tw:bg-acqpa-blue-600 tw:px-4 tw:py-1.5 tw:text-sm tw:font-semibold tw:text-white tw:transition-all;
+        /*@apply tw:uppercase tw:rounded-md tw:bg-acqpa-blue-600 tw:px-4 tw:py-1.5 tw:text-sm tw:font-semibold tw:text-white tw:transition-all;*/
+        @apply tw:uppercase tw:rounded-md tw:px-4 tw:py-1.5 tw:text-sm tw:font-semibold tw:transition-all;
         @apply tw:disabled:opacity-20 tw:disabled:cursor-not-allowed;
     }
     .btn-red, .btn-error{
