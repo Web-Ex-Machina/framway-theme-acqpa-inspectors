@@ -105,3 +105,8 @@ table:not(.table-list__container) td.toggled .table-list__action--wrapper .table
 table:not(.table-list__container) th.toggled .table-list__action--wrapper .table-list__action {
   display: inline-block;
 }
+
+.headerFW a.headerFW--a-override{
+	@extend .ft-u;
+	@extend .ft-blue;
+}
