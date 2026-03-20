@@ -4,6 +4,14 @@
   color:black;
 }
 
+.filters__line.line--2{
+	@extend .line--1;
+	margin: -5px 0;
+}
+.filters__line.line--3{
+	@extend .line--2;
+}
+
 canvas.signature,img.signature{
 	border: 1px solid lightgrey;
 }
