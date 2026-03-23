@@ -11,7 +11,7 @@
 @source "./../../../../../vendor/webexmachina/acqpa-inspectors-certification-platform-bundle/contao/templates/**/*.html5";
 @source "./../../../../../vendor/webexmachina/acqpa-inspectors-certification-platform-bundle/src/Controller/Frontend/**/*.php";
 @source "./safeword.txt";
-
+/* hues by https://www.tailwindhues.com/ */
 @theme{
     --color-acqpa-blue-50: oklch(0.974 0.011 252.087);
     --color-acqpa-blue-100: oklch(0.945 0.021 252.497);
@@ -50,6 +50,30 @@
     --color-acqpa-gris-800: oklch(0.361 0.005 286.23);
     --color-acqpa-gris-900: oklch(0.249 0.004 286.21);
     --color-acqpa-gris-950: oklch(0.197 0.004 286.09);
+
+    --color-acqpa-red-50: oklch(97.1% 0.013 17.951);
+    --color-acqpa-red-100: oklch(93.745% 0.03336 18.288);
+    --color-acqpa-red-200: oklch(88.791% 0.06473 18.905);
+    --color-acqpa-red-300: oklch(81.236% 0.11809 20.142);
+    --color-acqpa-red-400: oklch(70.982% 0.19645 22.787);
+    --color-acqpa-red-500: oklch(64.427% 0.24381 25.902);
+    --color-acqpa-red-600: oklch(58.573% 0.25318 27.896);
+    --color-acqpa-red-700: oklch(51.518% 0.22254 28.089);
+    --color-acqpa-red-800: oklch(45.079% 0.18336 27.47);
+    --color-acqpa-red-900: oklch(39.939% 0.14418 26.294);
+    --color-acqpa-red-950: oklch(25.8% 0.092 26.613);
+
+    --color-acqpa-green-50: oklch(98.572% 0.03072 134.37);
+    --color-acqpa-green-100: oklch(96.38% 0.08105 134.96);
+    --color-acqpa-green-200: oklch(93.222% 0.15702 137.21);
+    --color-acqpa-green-300: oklch(89.605% 0.24956 140.08);
+    --color-acqpa-green-400: oklch(85.585% 0.32085 142.6);
+    --color-acqpa-green-500: oklch(78.038% 0.30204 144.6);
+    --color-acqpa-green-600: oklch(65.79% 0.25523 145.43);
+    --color-acqpa-green-700: oklch(53.943% 0.19843 145.34);
+    --color-acqpa-green-800: oklch(45.795% 0.15162 144.68);
+    --color-acqpa-green-900: oklch(40.748% 0.11481 144.81);
+    --color-acqpa-green-950: oklch(27.4% 0.072 145.86);
 
     --font-body: "Ubuntu Sans", sans-serif;
     --font-alternative: "Ubuntu Condensed", sans-serif;
