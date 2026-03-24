@@ -118,3 +118,16 @@ table:not(.table-list__container) th.toggled .table-list__action--wrapper .table
 	@extend .ft-u;
 	@extend .ft-blue;
 }
+
+footer {
+	.mod_customnav{
+		font-size: body(font-size) * 0.9;
+		ul{
+			li{
+				a{
+					font-size: body(font-size) * 0.75;
+				}
+			}
+		}
+	}
+}
