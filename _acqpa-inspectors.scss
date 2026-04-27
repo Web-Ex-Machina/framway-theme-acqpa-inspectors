@@ -131,3 +131,27 @@ footer {
 		}
 	}
 }
+
+@media screen and (max-width: 1919px) {
+	.exam_session_fill_candidates_marks_modal__table_container{
+		width:100%;
+		table th
+		,table td
+		{
+			min-width:150px;
+			&.sticky {
+			  position: -webkit-sticky;
+			  position: sticky;
+				left:0px;
+				z-index:2000;
+				background-color: inherit;
+			}
+		}
+		table th{
+			/*min-width: fit-content(250px);*/
+			&.sticky {
+				background-color: var(--tw-color-acqpa-gris-50);
+			}
+		}
+	}
+}
