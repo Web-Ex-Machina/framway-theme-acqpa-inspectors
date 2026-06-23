@@ -182,7 +182,16 @@ footer {
   /*height: 5px;*/
   height: 2px;
 }
-
+.headerFW__nav__inline ul:not(.level_1) > li > a:hover,
+.headerFW__nav__inline li ul li > :not(ul):hover {
+	@extend .ft-blue;
+}
+.headerFW__nav__inline li ul li > :is(strong) {
+	@extend .ft-u;
+	&::before{
+		content:"> ";
+	}
+}
 .headerFW__logo{
 	padding: 0;
 }
